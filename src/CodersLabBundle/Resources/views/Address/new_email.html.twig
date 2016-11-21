@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CodersLabBundle:Address:newEmail{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Address:newEmail page</h1>
+    {% if isAddresInvalid == false %}
+        <form method="POST" action="">
+            <input type="text" name="userEmail">
+            <input type="submit" value="Dodaj adres">
+        </form>
+    {% else %}
+        Niepoprawny email
+    {% endif %}
+{% endblock %}

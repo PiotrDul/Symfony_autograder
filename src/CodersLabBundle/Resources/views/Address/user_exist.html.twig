@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CodersLabBundle:Address:userExist{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Address:userExist page</h1>
+ {% if isEdit == false %}
+        <form method="POST" action="">
+            <input type="text" name="address" value="{{ email }}">
+            <input type="submit" value="Zmień adres">
+        </form>
+    {% else %}
+        Adres został uaktualniony
+    {% endif %}
+    
+    <a href="deleteEmail/{{ userToken }}">Usuń adres email</a>
+{% endblock %}
